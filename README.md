@@ -3,6 +3,11 @@
 The application is called RoomBooking which helps users to book available rooms and schedule meetings.The application also provides
 interface to send invites and sms to intended users.
 
+
+Improvements to be made to the app in the next version:
+1.Use Dagger 2.0
+2.Use RxJava
+
 The app has three screens.
 1.RoomsList Screen - List of rooms with limited info about the rooms.
 2.Room Details Screen - It provides detailed information about the room like its capacity,equipments available,
@@ -48,3 +53,6 @@ Other Supporting Modules or Packages:
 api module : For Supporting Retrofit Module
 model: contains all the POJO objects used in the application
 util: contains validator api
+
+![alt text](https://github.com/raghu08/BookingRooms/blob/master/RoomsList.png)
+![alt text](https://github.com/raghu08/BookingRooms/blob/master/RoomDetail.png)
