@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">RoomBooking</string>
+    <string name="room_title">Rooms</string>
+    <string name="failure_message">Unable to fetch Rooms.It might be a problem with Network</string>
+    <string name="add_participant">Added Participants:</string>
+    <string name="send_pass">Send Passes</string>
+    <string name="add">Add</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="date_today">today</string>
+    <string name="room_list_title">Room List</string>
+    <string name="room_detail_title">Room Detail Info</string>
+    <string name="reservation_info">Reservation Info</string>
+    <string name="time_set">Time Set</string>
+    <string name="time_set_msg">Please select the time slot</string>
+    <string name="add_participant_title">Added Participants</string>
+
+    <string name="email_error_msg">Please enter a email address</string>
+    <string name="phone_error_msg">Please enter a phone number</string>
+    <string name="email_validation_error_msg">Please enter a valid email id</string>
+    <string name="name_error_msg">Please enter a name</string>
+
+    <string name="after_start_msg">Selected time should be after start time</string>
+    <string name="before_end_msg">Selected time should be before endtime</string>
+    <string name="already_added_particpant">Participant Already Added</string>
+
+    <string name="pass_sent_success_msg">Passes Sent to the added particpants</string>
+    <string name="room_booking">Room Booking</string>
+    <string name="room_name">Room name</string>
+    <string name="about_to_book">About to book</string>
+    <string name="reset">Reset</string>
+    <string name="capacity">Capacity</string>
+    <string name="floor">Floor</string>
+    <string name="room_2">Room 2</string>
+    <string name="size">Size</string>
+    <string name="room_that_everyone_wants">Room that everyone wants</string>
+    <string name="equipments">Equipments</string>
+    <string name="book">Book</string>
+    <string name="search_by_room_name">Search by room name</string>
+    <string name="filter">Filter</string>
+    <string name="set">Set</string>
+
+</resources>

@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient"
+    android:layout_margin="@dimen/margin_8"
+
+   >
+
+
+
+    <TextView
+        android:id="@+id/roomname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_10"
+        android:textColor="@color/white"
+        android:layout_alignParentLeft="true"
+        android:textSize="@dimen/tv_18"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_toLeftOf="@+id/closeButton"
+        android:textStyle="italic" />
+
+
+
+    <ImageView
+        android:id="@id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>
+
+
+

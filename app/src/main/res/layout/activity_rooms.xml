@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient"
+
+    android:layout_height="match_parent">
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:orientation="vertical"
+        >
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
+            android:title="@string/room_booking"
+            android:minHeight="?attr/actionBarSize"
+            >
+        </android.support.v7.widget.Toolbar>
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="16sp"
+            android:hint="@string/search_by_room_name"
+            android:layout_marginTop="20dp" />
+        <Button
+            android:id="@+id/selectDate"
+            android:layout_width="match_parent"
+            android:background="#FFFFFF"
+            android:textColor="@color/purple"
+            android:gravity="left|center"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/margin_8"
+            android:layout_height="@dimen/height_40" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:padding="@dimen/margin_8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

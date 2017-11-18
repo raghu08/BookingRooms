@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Raghavendra Malgi\Downloads\raghumalgi81-roombooking1aim-87c4b18ae158 (2)\raghumalgi81-roombooking1aim-87c4b18ae158\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\Raghavendra Malgi\Downloads\raghumalgi81-roombooking1aim-87c4b18ae158 (2)\raghumalgi81-roombooking1aim-87c4b18ae158\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_2d859db3f4f6ae904b6473b849d6a23e15758c78\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Raghavendra Malgi\Downloads\raghumalgi81-roombooking1aim-87c4b18ae158 (2)\raghumalgi81-roombooking1aim-87c4b18ae158\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5bbaf75c9c3f93f9507ebbdb699ae80867d1b48c">
+        <dex dex="C:\Users\Raghavendra Malgi\Downloads\raghumalgi81-roombooking1aim-87c4b18ae158 (2)\raghumalgi81-roombooking1aim-87c4b18ae158\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_4cfda47998ab8e7af908cc8f5e684f8b04de0f36\classes.dex" />
+    </item>
+
+</items>

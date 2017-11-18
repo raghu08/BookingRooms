@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_8"
+    android:layout_marginRight="@dimen/margin_8"
+    android:paddingTop="@dimen/padding_10"
+    android:paddingBottom="@dimen/padding_10">
+
+
+
+    <Button
+        android:id="@+id/starttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_10"
+        android:layout_alignParentLeft="true"
+        android:textSize="@dimen/tv_18"
+        android:textColor="@color/white"
+        android:background="@drawable/gradient"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/endtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:textColor="@color/white"
+        android:background="@drawable/gradient"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginTop="@dimen/padding_10"
+        android:layout_marginRight="@dimen/margin_4"
+        android:textSize="@dimen/tv_18"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/starttime"
+
+        />
+
+    <Button
+        android:id="@+id/setTimeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:textColor="@color/white"
+        android:background="@drawable/gradient"
+        android:text="@string/set"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginTop="@dimen/padding_10"
+        android:layout_marginRight="@dimen/margin_4"
+        android:textSize="@dimen/tv_18"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/endtime"
+
+        />
+
+
+
+
+</RelativeLayout>
+
