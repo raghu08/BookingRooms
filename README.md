@@ -1,6 +1,7 @@
 # BookingRooms
 
-The application is called RoomBooking
+The application is called RoomBooking which helps users to book available rooms and schedule meetings.The application also provides
+interface to send invites and sms to intended users.
 
 The app has three screens.
 1.RoomsList Screen - List of rooms with limited info about the rooms.
