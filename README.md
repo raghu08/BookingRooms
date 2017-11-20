@@ -3,10 +3,11 @@
 The application is called RoomBooking which helps users to book available rooms and schedule meetings.The application also provides
 interface to send invites and sms to intended users.
 
+***Updates in Version 2.0**
+   Implemented Dagger for dependency injection which promotes loose coupling(Lesser dependencies between components)
 
 Improvements to be made to the app in the next version:
-1.Use Dagger 2.0
-2.Use RxJava
+1.Use RxJava
 
 The app has three screens.
 1.RoomsList Screen - List of rooms with limited info about the rooms.
@@ -19,9 +20,10 @@ email to the intended participants about the meeting details.
 I have used following components for the application
 
 1.Retrofit for accessing webservice(A http library)
-2.Picasso for dynamic Image loading and caching images
-3.Gson for json parsing
-4.Other UI components such as recyclerview,appcompat,v4 and v7 support libraries
+2.Used Dagger 2.0 for dependency injectin
+3.Picasso for dynamic Image loading and caching images
+4.Gson for json parsing
+5.Other UI components such as recyclerview,appcompat,v4 and v7 support libraries
 
 
 Architecture Of RoomBooking Application
