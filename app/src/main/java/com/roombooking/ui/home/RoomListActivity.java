@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 
 import com.roombooking.R;
+import com.roombooking.RoomBookingApplication;
 import com.roombooking.model.Item;
 import com.roombooking.ui.home.adapter.RoomsListAdapter;
 
@@ -28,27 +29,31 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import javax.inject.Inject;
+
 public class RoomListActivity extends AppCompatActivity implements RoomsContract.View {
     private RecyclerView rv;
     private ProgressBar progressBar;
     private RoomsListAdapter adapter;
     private Button selectDate;
-    private RoomsContract.UserActionsListener presenter;
+    @Inject
+     RoomsContract.UserActionsListener presenter;
     private Calendar myCalendar = Calendar.getInstance();
-
     private List<Item> results = new ArrayList<>();
     private CoordinatorLayout coordinatorLayout;
     private DatePickerDialog.OnDateSetListener  date;
     private EditText search;
     private String dateStr;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rooms);
+        ((RoomBookingApplication)getApplication()).getAppComponent().inject(this);
         initView();
         addTextListener();
-        presenter = new RoomsPresenter(this);
+        presenter.setView(this);
         //Get Rooms for Today
         presenter.getRooms(getString(R.string.date_today));
 
@@ -59,7 +64,6 @@ public class RoomListActivity extends AppCompatActivity implements RoomsContract
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id
                 .coordinatorLayout);
         setTitle(getString(R.string.room_title));
-        presenter = new RoomsPresenter(this);
         rv = (RecyclerView)findViewById(R.id.recyclerView);
         selectDate = (Button) findViewById(R.id.selectDate);
         rv.setHasFixedSize(true);

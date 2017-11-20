@@ -18,6 +18,7 @@ public interface RoomsContract {
 
     interface UserActionsListener {
         void  getRooms(String date);
+        void  setView(RoomsContract.View view);
 
     }
 }

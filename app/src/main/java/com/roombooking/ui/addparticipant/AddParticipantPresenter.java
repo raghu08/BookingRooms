@@ -1,7 +1,9 @@
 package com.roombooking.ui.addparticipant;
 
+import android.content.Context;
 import android.util.Log;
 
+import com.roombooking.RoomBookingApplication;
 import com.roombooking.model.Booking;
 import com.roombooking.model.Participant;
 import com.roombooking.model.Pass;
@@ -9,6 +11,7 @@ import com.roombooking.model.SendPassModel;
 import com.roombooking.model.SendPasses;
 import com.roombooking.repository.AddParticpantRepoListener;
 import com.roombooking.repository.RoomsRepository;
+import com.roombooking.ui.home.RoomsContract;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -18,19 +21,30 @@ import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
+import javax.inject.Inject;
+
 
 public class AddParticipantPresenter implements AddParticipantContract.UserActionsListener,AddParticpantRepoListener {
 
-    private RoomsRepository addParticipantRepo;
-    private final AddParticipantContract.View  view;
+     @Inject
+     RoomsRepository addParticipantRepo;
+     @Inject
+     SendPasses passes;
+     @Inject
+     Booking booking;
 
-    public AddParticipantPresenter(AddParticipantContract.View view) {
-        addParticipantRepo = new RoomsRepository();
-        this.view = view;
+     private  AddParticipantContract.View  view;
+
+
+
+    public AddParticipantPresenter(Context context) {
+        ((RoomBookingApplication)context).getAppComponent().inject(this);
     }
 
-
-
+    @Override
+    public void setView(AddParticipantContract.View view){
+        this.view = view;
+    }
 
 
     @Override
@@ -78,8 +92,6 @@ public class AddParticipantPresenter implements AddParticipantContract.UserActio
             e.printStackTrace();
         }
 
-        SendPasses p = new SendPasses();
-        Booking booking  =new Booking();
         booking.setRoom(model.getName());
         booking.setDate(""+selectedDate.getTime()/1000);
         booking.setDescription("Project 1aim is going to be starting tommorrow");
@@ -95,8 +107,8 @@ public class AddParticipantPresenter implements AddParticipantContract.UserActio
             passList.add(pass);
         }
 
-        p.setBooking(booking);
-        p.setPasses(passList);
-        addParticipantRepo.sendPasses(this,p);
+        passes.setBooking(booking);
+        passes.setPasses(passList);
+        addParticipantRepo.sendPasses(this,passes);
     }
 }

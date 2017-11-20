@@ -1,22 +1,33 @@
 package com.roombooking.ui.home;
 
+import android.content.Context;
+
+import com.roombooking.RoomBookingApplication;
 import com.roombooking.model.Item;
 import com.roombooking.repository.RoomsRepoListener;
 import com.roombooking.repository.RoomsRepository;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 
 public class RoomsPresenter implements RoomsContract.UserActionsListener,RoomsRepoListener {
 
-    private RoomsRepository roomsRepo;
-    private final RoomsContract.View  view;
+    @Inject
+     RoomsRepository roomsRepo;
+    private  RoomsContract.View  view;
 
-    public RoomsPresenter(RoomsContract.View view) {
-        roomsRepo = new RoomsRepository();
-        this.view = view;
+
+
+    public RoomsPresenter(Context context) {
+        ((RoomBookingApplication)context).getAppComponent().inject(this);
     }
 
+    @Override
+    public void setView(RoomsContract.View view){
+        this.view = view;
+    }
 
 
 

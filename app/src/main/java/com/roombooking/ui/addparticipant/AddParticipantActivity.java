@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.roombooking.R;
+import com.roombooking.RoomBookingApplication;
 import com.roombooking.model.Participant;
 import com.roombooking.model.SendPassModel;
 import com.roombooking.ui.addparticipant.adapter.AddParticipantAdapter;
@@ -23,6 +24,8 @@ import com.roombooking.util.Validator;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.inject.Inject;
 
 public class AddParticipantActivity extends AppCompatActivity
         implements AddParticipantContract.View,AddParticipantAdapter.NotifyDataToUi{
@@ -36,13 +39,15 @@ public class AddParticipantActivity extends AppCompatActivity
     private Button sendPassButton;
     private SendPassModel model;
     public final static String SEND_PASS  = "sendpass";
-    private AddParticipantContract.UserActionsListener presenter;
+    @Inject
+     AddParticipantContract.UserActionsListener presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_participant);
-         presenter = new AddParticipantPresenter(this);
+        ((RoomBookingApplication)getApplication()).getAppComponent().inject(this);
+        presenter.setView(this);
         model = getIntent().getExtras().getParcelable(SEND_PASS);
         initUi();
     }

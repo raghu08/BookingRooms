@@ -1,7 +1,9 @@
 package com.roombooking.repository;
 
+import android.content.Context;
 import android.util.Log;
 
+import com.roombooking.RoomBookingApplication;
 import com.roombooking.api.RoomsApiService;
 import com.roombooking.model.Item;
 import com.roombooking.model.Param;
@@ -11,6 +13,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.List;
+
+import javax.inject.Inject;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -22,9 +26,14 @@ public class RoomsRepository {
     private final static String ERROR = "error";
     private final static String TEXT  = "text";
 
+    @Inject
+    RoomsApiService apiService;
+    public RoomsRepository(Context context){
+        ((RoomBookingApplication)context).getAppComponent().inject(this);
+    }
+
 
     public void getRooms(final RoomsRepoListener listener,String date){
-        RoomsApiService apiService = RetrofitClient.getInstance().getRoomsApiService();
         Param p = new Param();
         p.setDate(date);
         Call<List<Item>> call = apiService.getRooms(p);
@@ -44,8 +53,6 @@ public class RoomsRepository {
     }
 
     public void sendPasses(final AddParticpantRepoListener listener,SendPasses sendPass){
-        RoomsApiService apiService = RetrofitClient.getInstance().getRoomsApiService();
-
         Call<String> call = apiService.sendPasses(sendPass);
         call.enqueue(new Callback<String>() {
             @Override
