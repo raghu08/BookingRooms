@@ -21,7 +21,7 @@ ext.junitVersion = '4.12'
 ext.powerMockito = '1.6.2'
 ext.espressoVersion = '2.2.2'
 ext.mockitoVersion = '1.10.19'
-
+ext.daggerVersion = '2.11'
 
 allprojects {
     repositories {
