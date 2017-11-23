@@ -1,6 +1,7 @@
 package com.roombooking.ui.roomdetail;
 
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import com.roombooking.R;
 import com.roombooking.custom.ViewPagerImageAdapter;
+import com.roombooking.databinding.ActivityRoomDetailBinding;
 import com.roombooking.model.ItemParcelable;
 import com.roombooking.model.SendPassModel;
 import com.roombooking.model.TimeBound;
@@ -60,6 +62,8 @@ public class RoomDetailActivity extends AppCompatActivity implements TimesAdapte
 
     private void init() {
         final ItemParcelable item = getIntent().getExtras().getParcelable(PARCEL);
+        ActivityRoomDetailBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_room_detail);
+        binding.setItem(item);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(getString(R.string.room_detail_title));
         setSupportActionBar(toolbar);
@@ -71,10 +75,10 @@ public class RoomDetailActivity extends AppCompatActivity implements TimesAdapte
         reservation = (TextView) findViewById(R.id.reservation);
         reset = (Button) findViewById(R.id.reset);
 
-        TextView name = (TextView) findViewById(R.id.room_name);
+      //  TextView name = (TextView) findViewById(R.id.room_name);
         TextView equipment = (TextView) findViewById(R.id.equipment_list);
-        TextView size = (TextView) findViewById(R.id.size);
-        TextView capacity = (TextView) findViewById(R.id.capacity);
+     //   TextView size = (TextView) findViewById(R.id.size);
+      //  TextView capacity = (TextView) findViewById(R.id.capacity);
         Button book = (Button) findViewById(R.id.book_room);
         book.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,8 +97,8 @@ public class RoomDetailActivity extends AppCompatActivity implements TimesAdapte
                 startActivity(intent);
             }
         });
-        location.setText(item.getLocation());
-        name.setText(item.getName());
+      //  location.setText(item.getLocation());
+      //  name.setText(item.getName());
         for (String equipmentStr : item.getEquipment()) {
             equipment.append(equipmentStr + "\n");
         }
@@ -102,8 +106,8 @@ public class RoomDetailActivity extends AppCompatActivity implements TimesAdapte
         updateTimebounds(item);
 
 
-        size.setText(item.getSize());
-        capacity.setText(item.getCapacity());
+       // size.setText(item.getSize());
+      //  capacity.setText(item.getCapacity());
         pager = (ViewPager) findViewById(R.id.pager);
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         ViewPagerImageAdapter adapter = new ViewPagerImageAdapter(RoomDetailActivity.this, item.getImages());
