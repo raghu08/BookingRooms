@@ -139,10 +139,7 @@ public class AddParticipantActivity extends AppCompatActivity
             InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(emailEt.getWindowToken(), 0);
 
-            Participant participant = new Participant();
-            participant.setEmail(strEmail);
-            participant.setPhone(strPhone);
-            participant.setName(strName);
+            Participant participant = new Participant(strName,strEmail,strPhone);
             if(participantList.contains(participant)){
                 Toast.makeText(this,getString(R.string.already_added_particpant),Toast.LENGTH_SHORT).show();
                 return;

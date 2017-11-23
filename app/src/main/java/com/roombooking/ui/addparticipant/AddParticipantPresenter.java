@@ -1,7 +1,6 @@
 package com.roombooking.ui.addparticipant;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.roombooking.RoomBookingApplication;
 import com.roombooking.model.Booking;
@@ -11,7 +10,6 @@ import com.roombooking.model.SendPassModel;
 import com.roombooking.model.SendPasses;
 import com.roombooking.repository.AddParticpantRepoListener;
 import com.roombooking.repository.RoomsRepository;
-import com.roombooking.ui.home.RoomsContract;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -19,7 +17,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-import java.util.TimeZone;
 
 import javax.inject.Inject;
 
