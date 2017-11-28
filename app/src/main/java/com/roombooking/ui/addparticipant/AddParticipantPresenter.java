@@ -8,7 +8,7 @@ import com.roombooking.model.Participant;
 import com.roombooking.model.Pass;
 import com.roombooking.model.SendPassModel;
 import com.roombooking.model.SendPasses;
-import com.roombooking.repository.AddParticpantRepoListener;
+import com.roombooking.repository.AddParticipantRepoListener;
 import com.roombooking.repository.RoomsRepository;
 
 import java.text.ParseException;
@@ -21,7 +21,7 @@ import java.util.Locale;
 import javax.inject.Inject;
 
 
-public class AddParticipantPresenter implements AddParticipantContract.UserActionsListener,AddParticpantRepoListener {
+public class AddParticipantPresenter implements AddParticipantContract.UserActionsListener,AddParticipantRepoListener {
 
      @Inject
      RoomsRepository addParticipantRepo;

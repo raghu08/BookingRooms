@@ -52,7 +52,7 @@ public class RoomsRepository {
 
     }
 
-    public void sendPasses(final AddParticpantRepoListener listener,SendPasses sendPass){
+    public void sendPasses(final AddParticipantRepoListener listener, SendPasses sendPass){
         Call<String> call = apiService.sendPasses(sendPass);
         call.enqueue(new Callback<String>() {
             @Override

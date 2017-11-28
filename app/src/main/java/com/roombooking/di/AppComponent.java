@@ -1,6 +1,6 @@
 package com.roombooking.di;
 
-import com.roombooking.repository.AddParticpantRepoListener;
+import com.roombooking.repository.AddParticipantRepoListener;
 import com.roombooking.repository.RoomsRepository;
 import com.roombooking.ui.addparticipant.AddParticipantActivity;
 import com.roombooking.ui.addparticipant.AddParticipantPresenter;
@@ -22,9 +22,9 @@ import dagger.Component;
         void inject(RoomListActivity roomListActivity);
         void inject(RoomsRepository roomsRepository);
         void inject(RoomsPresenter roomsPresenter);
-        void inject(AddParticpantRepoListener addParticpantRepoListener);
+        void inject(AddParticipantRepoListener addParticpantRepoListener);
         void inject(AddParticipantActivity addParticipantActivity);
-       void inject(AddParticipantPresenter addParticipantPresenter);
+        void inject(AddParticipantPresenter addParticipantPresenter);
     }
 
 

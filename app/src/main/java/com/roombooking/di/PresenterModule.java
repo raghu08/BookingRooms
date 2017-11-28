@@ -31,6 +31,6 @@ public class PresenterModule {
   @Provides
   @Singleton
   RoomsRepository provideRoomsRepo(Context context) {
-     return new RoomsRepository(context);
+    return new RoomsRepository(context);
   }
 }
