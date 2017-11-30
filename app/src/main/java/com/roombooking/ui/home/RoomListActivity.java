@@ -37,7 +37,7 @@ public class RoomListActivity extends AppCompatActivity implements RoomsContract
     private RoomsListAdapter adapter;
     private Button selectDate;
     @Inject
-     RoomsContract.UserActionsListener presenter;
+    RoomsContract.UserActionsListener presenter;
     private Calendar myCalendar = Calendar.getInstance();
     private List<Item> results = new ArrayList<>();
     private CoordinatorLayout coordinatorLayout;

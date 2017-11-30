@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.sample.foo.databindingsample.SecondActivity">
 
-    <data>
-        <variable
-            name="item"
-            type="com.roombooking.model.ItemParcelable" />
-    </data>
 <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -83,7 +78,6 @@
                     android:layout_marginLeft="@dimen/padding_normal"
                     android:layout_marginRight="@dimen/padding_normal"
                     android:focusable="true"
-                    android:text=" @{item.name}"
                     android:fontFamily="sans-serif-medium"
 
                     android:textColor="@color/black"
@@ -170,7 +164,6 @@
                     android:layout_marginLeft="@dimen/padding_normal"
                     android:layout_marginRight="@dimen/padding_normal"
                     android:textAlignment="viewStart"
-                    android:text="@{item.capacity}"
                     android:textAppearance="?android:textAppearanceMedium"
                     android:textColor="@color/black"
                     android:textSize="@dimen/tv_18" />
@@ -201,7 +194,6 @@
                     android:layout_marginLeft="@dimen/padding_normal"
                     android:layout_marginRight="@dimen/padding_normal"
                     android:fontFamily="sans-serif-medium"
-                    android:text="@{item.location}"
                     android:textColor="@color/black"
                     android:textSize="@dimen/tv_18" />
 
@@ -231,7 +223,6 @@
                     android:layout_marginLeft="@dimen/padding_normal"
                     android:layout_marginRight="@dimen/padding_normal"
                     android:fontFamily="sans-serif-medium"
-                    android:text="@{item.size}"
                     android:textColor="@color/black"
                     android:textSize="@dimen/tv_18" />
 
@@ -295,4 +286,3 @@
         android:text="@string/book"
         android:textColor="@color/white" />
 </RelativeLayout>
-</layout>

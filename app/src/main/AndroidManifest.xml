@@ -26,8 +26,6 @@
         </activity>
         <activity android:name=".ui.addparticipant.AddParticipantActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
-        <activity android:name=".ui.roomdetail.RoomDetailActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>
