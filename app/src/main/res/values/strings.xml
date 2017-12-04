@@ -40,5 +40,6 @@
     <string name="search_by_room_name">Search by room name</string>
     <string name="filter">Filter</string>
     <string name="set">Set</string>
+    <string name="title_activity_room_detail_info">RoomDetailInfoActivity</string>
 
 </resources>

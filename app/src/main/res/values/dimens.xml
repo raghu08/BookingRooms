@@ -10,4 +10,5 @@
     <dimen name="height_48">48dp</dimen>
     <dimen name="height_1">1dp</dimen>
     <dimen name="height_40">40dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

@@ -12,7 +12,7 @@ import com.roombooking.R
 import com.roombooking.model.Item
 import com.roombooking.model.ItemParcelable
 import com.roombooking.repository.RetrofitClient
-import com.roombooking.ui.roomdetail.RoomDetailActivity
+import com.roombooking.ui.roomdetail.RoomDetailInfoActivity
 import com.squareup.picasso.Picasso
 
 /**
@@ -58,9 +58,9 @@ class RoomsListAdapter(var context: Context, var itemList: List<Item>?) :
             itemParcel.size = items.size
 
 
-            val intent = Intent(context, RoomDetailActivity::class.java)
-            intent.putExtra(RoomDetailActivity.PARCEL, itemParcel)
-            intent.putExtra(RoomDetailActivity.DATE_STRING, dateStr)
+            val intent = Intent(context, RoomDetailInfoActivity::class.java)
+            intent.putExtra(RoomDetailInfoActivity.PARCEL, itemParcel)
+            intent.putExtra(RoomDetailInfoActivity.DATE_STRING, dateStr)
             context.startActivity(intent)
         })
 

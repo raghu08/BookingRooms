@@ -1,7 +1,6 @@
 package com.roombooking.repository;
 
 
-import com.roombooking.model.ApiResponse;
 import com.roombooking.model.Item;
 
 import java.util.List;
