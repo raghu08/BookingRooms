@@ -41,5 +41,6 @@
     <string name="filter">Filter</string>
     <string name="set">Set</string>
     <string name="title_activity_room_detail_info">RoomDetailInfoActivity</string>
+    <string name="title_activity_room_detail">RoomDetailActivity</string>
 
 </resources>

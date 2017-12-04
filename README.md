@@ -4,7 +4,8 @@ The application is called RoomBooking which helps users to book available rooms 
 interface to send invites and sms to intended users.
 
 ***Updates in Version 2.0**
-   Implemented Dagger for dependency injection which promotes loose coupling(Lesser dependencies between components)
+Implemented Dagger for dependency injection which promotes loose coupling(Lesser dependencies between components)
+Started converting the code to kotlin to leverage several advantages of kotlin
 
 Improvements to be made to the app in the next version:
 1.Use RxJava
