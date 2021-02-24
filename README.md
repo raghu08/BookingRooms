@@ -5,7 +5,7 @@ interface to send invites and sms to intended users.
 
 ***Updates in Version 2.0**
 1. Implemented Dagger for dependency injection which promotes loose coupling(Lesser dependencies between components)
-2. Started converting the code to kotlin to leverage several advantages of kotlin
+2. Converting the code to kotlin to leverage several advantages of kotlin
 
 Improvements to be made to the app in the next version:
 1.Use RxJava
